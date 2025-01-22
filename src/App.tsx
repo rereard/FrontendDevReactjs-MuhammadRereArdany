@@ -11,7 +11,7 @@ function App() {
     const options = {
       method: 'POST',
       headers: {
-        'x-rapidapi-key': 'f3d53eacfbmsh604938fe51b901ap158194jsnb0457b5b66d0',
+        'x-rapidapi-key': import.meta.env.VITE_API_KEY,
         'x-rapidapi-host': 'worldwide-restaurants.p.rapidapi.com',
         'Content-Type': 'application/x-www-form-urlencoded'
       },
