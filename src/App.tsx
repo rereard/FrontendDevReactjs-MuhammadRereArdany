@@ -26,14 +26,11 @@ function App() {
       setLoading(true)
       const response = await fetch(url, options);
       const result = await response.json();
-      console.log("fetching");
       setRestaurantList(result.results.data)
       const categories: string[] = result.results.data.map((item: { cuisine: any[]; })  => item.cuisine[0].name)
-      console.log("categories",categories);
       setCategoriesOptions(categoriesOptions => [...new Set([...categoriesOptions, ...categories])])
       setLoading(false)
     } catch (error) {
-      console.error(error);
       setLoading(false)
     }
   }
@@ -54,12 +51,6 @@ function App() {
   const [filteredList, setFilteredList] = useState<Record<string, any>[]>([])
   const [isFilter, setIsFilter] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log("list", restaurantList);
-    console.log("price level",restaurantList[1]?.open_now_text);
-    
-  }, [restaurantList]);
 
   const priceOptions: string[] = ["Price", "Cheap", "Mid-range", "Expensive"];
 
@@ -91,7 +82,6 @@ function App() {
   }
 
   function filterRestaurant(items: Record<string, any>[], filters: filterOption){
-    console.log("param item", items);
     const tes = items.filter(item => {
       const openMatch = filters.isOpen ? item?.open_now_text === "Open Now" : true
       const priceMatch = filters.price ? item?.price_level === filters.price : true
@@ -102,13 +92,11 @@ function App() {
   }
 
   useEffect(() => {
-    console.log("filter", isFilter);
     let filtered: Record<string, any>[] = []
     if(isFilter){
       filtered = filterRestaurant(restaurantList, { isOpen: isChecked, price: selectedPrice === "Cheap" ? "$" : selectedPrice === "Mid-range" ? "$$ - $$$" : selectedPrice === "Expensive" ? "$$$" : undefined, categories: selectedCategories !== "Categories" ? selectedCategories : undefined })
       setFilteredList(filtered)
     }
-    console.log("filtered list", filtered);
   }, [isFilter, isChecked, selectedPrice, selectedCategories]);
 
   const dropdownPriceRef = useRef<HTMLDivElement>(null);

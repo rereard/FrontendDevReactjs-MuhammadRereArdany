@@ -45,15 +45,11 @@ function Detail(){
         response1.json(),
         response2.json()
       ])
-      console.log("fetching");
-      console.log("detail", result1.results);
-      console.log("5 reviews", result2.results.data.slice(0, 5));
       const slicedReviews = result2.results.data.slice(0, 5)
       setDetail(result1.results)
       setReviewtList(slicedReviews)
       setLoading(false)
     } catch (error) {
-      console.error(error);
       setLoading(false)
     }
   }
@@ -67,10 +63,6 @@ function Detail(){
   const [detail, setDetail] = useState<Record<string, any>>({})
   const [reviewtList, setReviewtList] = useState<Record<string, any>[]>([])
   const [loading, setLoading] = useState<boolean>(false);
-
-  useEffect(() => {
-    console.log("list", detail);
-  }, [detail]);
 
   if(loading){
     return(
