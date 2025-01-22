@@ -1,9 +1,10 @@
 # Technical Test - Front End Developer Sekawan Media
 
 React version: 18.3.1
+
 Node version: 22.13.0
 
-## How to Start
+## How to Run
 
 - Make .env file in FrontendDevReactjs-MuhammadRereArdany/
 - Put `VITE_API_KEY = your API key` in .env
@@ -11,7 +12,7 @@ Node version: 22.13.0
 - Type `npm install` then `npm run dev` on terminal
 
 or visit:
-technical-restaurant.vercel.app
+[technical-restaurant.vercel.app](https://technical-restaurant.vercel.app/)
 
 
 # React + TypeScript + Vite
