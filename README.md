@@ -3,12 +3,16 @@
 React version: 18.3.1
 Node version: 22.13.0
 
-# How to Start
+## How to Start
 
 - Make .env file in FrontendDevReactjs-MuhammadRereArdany/
 - Put `VITE_API_KEY = your API key` in .env
-- Get your own API key on https://rapidapi.com/ptwebsolution/api/worldwide-restaurants
+- Get your own API key on https://rapidapi.com/ptwebsolution/api/worldwide-restaurants (high latency might a bit slow)
 - Type `npm install` then `npm run dev` on terminal
+
+or visit:
+technical-restaurant.vercel.app
+
 
 # React + TypeScript + Vite
 
