@@ -135,7 +135,6 @@ function Detail(){
         {reviewtList.map(review => (
           <Review
             key={review?.id} 
-            id={review?.id}
             rating={Number(review?.rating)}
             photos={review?.photos}
             userName={review?.user?.username}
@@ -150,14 +149,13 @@ function Detail(){
 export default Detail
 
 interface ReviewProps{
-  id: string;
   rating: number;
   photos: Array<any>;
   userName: string;
   text: string
 }
 
-function Review({id, rating, photos, userName, text}: ReviewProps){
+function Review({ rating, photos, userName, text}: ReviewProps){
   return(
     <div className="mb-6">
       <div className="flex md:space-x-1 items-center">
