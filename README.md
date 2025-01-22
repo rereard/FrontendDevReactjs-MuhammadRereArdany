@@ -1,3 +1,15 @@
+# Technical Test - Front End Developer Sekawan Media
+
+React version: 18.3.1
+Node version: 22.13.0
+
+# How to Start
+
+- Make .env file in FrontendDevReactjs-MuhammadRereArdany/
+- Put `VITE_API_KEY = your API key` in .env
+- Get your own API key on https://rapidapi.com/ptwebsolution/api/worldwide-restaurants
+- Type `npm install` then `npm run dev` on terminal
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
