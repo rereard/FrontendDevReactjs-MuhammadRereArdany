@@ -1,4 +1,4 @@
-# Technical Test - Front End Developer Sekawan Media
+# Technical Test - Front End Developer
 
 React version: 18.3.1
 
